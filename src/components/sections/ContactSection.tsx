@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
@@ -12,7 +14,7 @@ export function ContactSection({ showHeading = true }: { showHeading?: boolean }
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(BUSINESS.mapQuery)}&z=13&output=embed`;
   const a = BUSINESS.address;
 
-  const rows: { label: string; value: React.ReactNode }[] = [
+  const rows: { label: string; value: ReactNode }[] = [
     {
       label: c.labels.address,
       value: (
