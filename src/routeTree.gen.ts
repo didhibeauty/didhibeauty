@@ -10,33 +10,206 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as ExperienciaRouteImport } from './routes/experiencia'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
+import { Route as SobreNosotrosRouteImport } from './routes/sobre-nosotros'
+import { Route as TratamientosRouteImport } from './routes/tratamientos'
+import { Route as EnIndexRouteImport } from './routes/en.index'
+import { Route as EnAboutRouteImport } from './routes/en.about'
+import { Route as EnContactRouteImport } from './routes/en.contact'
+import { Route as EnCookiesRouteImport } from './routes/en.cookies'
+import { Route as EnExperienceRouteImport } from './routes/en.experience'
+import { Route as EnPrivacyRouteImport } from './routes/en.privacy'
+import { Route as EnTreatmentsRouteImport } from './routes/en.treatments'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienciaRoute = ExperienciaRouteImport.update({
+  id: '/experiencia',
+  path: '/experiencia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreNosotrosRoute = SobreNosotrosRouteImport.update({
+  id: '/sobre-nosotros',
+  path: '/sobre-nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TratamientosRoute = TratamientosRouteImport.update({
+  id: '/tratamientos',
+  path: '/tratamientos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnIndexRoute = EnIndexRouteImport.update({
+  id: '/en/',
+  path: '/en/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnAboutRoute = EnAboutRouteImport.update({
+  id: '/en/about',
+  path: '/en/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnContactRoute = EnContactRouteImport.update({
+  id: '/en/contact',
+  path: '/en/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnCookiesRoute = EnCookiesRouteImport.update({
+  id: '/en/cookies',
+  path: '/en/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnExperienceRoute = EnExperienceRouteImport.update({
+  id: '/en/experience',
+  path: '/en/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnPrivacyRoute = EnPrivacyRouteImport.update({
+  id: '/en/privacy',
+  path: '/en/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnTreatmentsRoute = EnTreatmentsRouteImport.update({
+  id: '/en/treatments',
+  path: '/en/treatments',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
+  '/experiencia': typeof ExperienciaRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/tratamientos': typeof TratamientosRoute
+  '/en/about': typeof EnAboutRoute
+  '/en/contact': typeof EnContactRoute
+  '/en/cookies': typeof EnCookiesRoute
+  '/en/experience': typeof EnExperienceRoute
+  '/en/privacy': typeof EnPrivacyRoute
+  '/en/treatments': typeof EnTreatmentsRoute
+  '/en/': typeof EnIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
+  '/experiencia': typeof ExperienciaRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/tratamientos': typeof TratamientosRoute
+  '/en/about': typeof EnAboutRoute
+  '/en/contact': typeof EnContactRoute
+  '/en/cookies': typeof EnCookiesRoute
+  '/en/experience': typeof EnExperienceRoute
+  '/en/privacy': typeof EnPrivacyRoute
+  '/en/treatments': typeof EnTreatmentsRoute
+  '/en': typeof EnIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
+  '/experiencia': typeof ExperienciaRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/tratamientos': typeof TratamientosRoute
+  '/en/about': typeof EnAboutRoute
+  '/en/contact': typeof EnContactRoute
+  '/en/cookies': typeof EnCookiesRoute
+  '/en/experience': typeof EnExperienceRoute
+  '/en/privacy': typeof EnPrivacyRoute
+  '/en/treatments': typeof EnTreatmentsRoute
+  '/en/': typeof EnIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contacto'
+    | '/cookies'
+    | '/experiencia'
+    | '/privacidad'
+    | '/sobre-nosotros'
+    | '/tratamientos'
+    | '/en/about'
+    | '/en/contact'
+    | '/en/cookies'
+    | '/en/experience'
+    | '/en/privacy'
+    | '/en/treatments'
+    | '/en/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contacto'
+    | '/cookies'
+    | '/experiencia'
+    | '/privacidad'
+    | '/sobre-nosotros'
+    | '/tratamientos'
+    | '/en/about'
+    | '/en/contact'
+    | '/en/cookies'
+    | '/en/experience'
+    | '/en/privacy'
+    | '/en/treatments'
+    | '/en'
+  id:
+    | '__root__'
+    | '/'
+    | '/contacto'
+    | '/cookies'
+    | '/experiencia'
+    | '/privacidad'
+    | '/sobre-nosotros'
+    | '/tratamientos'
+    | '/en/about'
+    | '/en/contact'
+    | '/en/cookies'
+    | '/en/experience'
+    | '/en/privacy'
+    | '/en/treatments'
+    | '/en/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactoRoute: typeof ContactoRoute
+  CookiesRoute: typeof CookiesRoute
+  ExperienciaRoute: typeof ExperienciaRoute
+  PrivacidadRoute: typeof PrivacidadRoute
+  SobreNosotrosRoute: typeof SobreNosotrosRoute
+  TratamientosRoute: typeof TratamientosRoute
+  EnAboutRoute: typeof EnAboutRoute
+  EnContactRoute: typeof EnContactRoute
+  EnCookiesRoute: typeof EnCookiesRoute
+  EnExperienceRoute: typeof EnExperienceRoute
+  EnPrivacyRoute: typeof EnPrivacyRoute
+  EnTreatmentsRoute: typeof EnTreatmentsRoute
+  EnIndexRoute: typeof EnIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +221,115 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiencia': {
+      id: '/experiencia'
+      path: '/experiencia'
+      fullPath: '/experiencia'
+      preLoaderRoute: typeof ExperienciaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre-nosotros': {
+      id: '/sobre-nosotros'
+      path: '/sobre-nosotros'
+      fullPath: '/sobre-nosotros'
+      preLoaderRoute: typeof SobreNosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tratamientos': {
+      id: '/tratamientos'
+      path: '/tratamientos'
+      fullPath: '/tratamientos'
+      preLoaderRoute: typeof TratamientosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/': {
+      id: '/en/'
+      path: '/en'
+      fullPath: '/en/'
+      preLoaderRoute: typeof EnIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/about': {
+      id: '/en/about'
+      path: '/en/about'
+      fullPath: '/en/about'
+      preLoaderRoute: typeof EnAboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/contact': {
+      id: '/en/contact'
+      path: '/en/contact'
+      fullPath: '/en/contact'
+      preLoaderRoute: typeof EnContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/cookies': {
+      id: '/en/cookies'
+      path: '/en/cookies'
+      fullPath: '/en/cookies'
+      preLoaderRoute: typeof EnCookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/experience': {
+      id: '/en/experience'
+      path: '/en/experience'
+      fullPath: '/en/experience'
+      preLoaderRoute: typeof EnExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/privacy': {
+      id: '/en/privacy'
+      path: '/en/privacy'
+      fullPath: '/en/privacy'
+      preLoaderRoute: typeof EnPrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/treatments': {
+      id: '/en/treatments'
+      path: '/en/treatments'
+      fullPath: '/en/treatments'
+      preLoaderRoute: typeof EnTreatmentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactoRoute: ContactoRoute,
+  CookiesRoute: CookiesRoute,
+  ExperienciaRoute: ExperienciaRoute,
+  PrivacidadRoute: PrivacidadRoute,
+  SobreNosotrosRoute: SobreNosotrosRoute,
+  TratamientosRoute: TratamientosRoute,
+  EnAboutRoute: EnAboutRoute,
+  EnContactRoute: EnContactRoute,
+  EnCookiesRoute: EnCookiesRoute,
+  EnExperienceRoute: EnExperienceRoute,
+  EnPrivacyRoute: EnPrivacyRoute,
+  EnTreatmentsRoute: EnTreatmentsRoute,
+  EnIndexRoute: EnIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
