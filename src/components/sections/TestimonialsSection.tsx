@@ -20,10 +20,10 @@ export function TestimonialsSection() {
           )}
         </SectionHeading>
 
-        <ul className="mt-16 grid gap-6 md:grid-cols-3 lg:gap-8">
+        <div className="mt-16 grid gap-6 md:grid-cols-3 lg:gap-8">
           {TESTIMONIALS.map((r, i) => (
             <Reveal key={i} delay={i * 100}>
-              <li className="flex h-full list-none flex-col bg-card p-8 lg:p-10">
+              <figure className="flex h-full flex-col bg-card p-8 lg:p-10">
                 <div className="flex items-center justify-between">
                   <div className="flex gap-1 text-olive" role="img" aria-label={tt.rating(r.rating)}>
                     {Array.from({ length: 5 }).map((_, s) => (
@@ -45,11 +45,11 @@ export function TestimonialsSection() {
                 <blockquote className="mt-8 flex-1 font-serif text-xl italic leading-snug md:text-2xl">
                   “{r.text[lang]}”
                 </blockquote>
-                <p className="eyebrow mt-8 text-muted-foreground">{r.name}</p>
-              </li>
+                <figcaption className="eyebrow mt-8 text-muted-foreground">{r.name}</figcaption>
+              </figure>
             </Reveal>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

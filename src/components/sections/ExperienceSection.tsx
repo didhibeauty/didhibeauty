@@ -49,17 +49,17 @@ export function ExperienceSection({ full = false }: { full?: boolean }) {
           </div>
 
           {full && (
-            <ol className="mt-24 grid gap-12 border-t border-line pt-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+            <div className="mt-24 grid gap-12 border-t border-line pt-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {e.steps.map((s, i) => (
                 <Reveal key={s.title} delay={i * 90}>
-                  <li className="list-none">
+                  <div>
                     <span className="font-serif text-5xl text-olive">0{i + 1}</span>
                     <h3 className="mt-6 font-serif text-2xl">{s.title}</h3>
                     <p className="mt-3 text-sm text-muted-foreground">{s.text}</p>
-                  </li>
+                  </div>
                 </Reveal>
               ))}
-            </ol>
+            </div>
           )}
         </div>
       </section>
