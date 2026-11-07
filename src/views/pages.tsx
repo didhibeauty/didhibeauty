@@ -67,7 +67,7 @@ export function ExperiencePage({ lang }: P) {
         eyebrow={t.experience.eyebrow}
         title={t.experience.titleLine1}
         italic={t.experience.titleLine2}
-        image="ritual"
+        image="aromatherapy"
       />
       <ExperienceSection full />
       <GallerySection />
