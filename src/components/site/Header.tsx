@@ -38,6 +38,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
   const close = () => setOpen(false);
 
   return (
+    <>
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-700",
@@ -90,12 +91,13 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           </button>
         </div>
       </div>
+    </header>
 
-      {/* Mobile navigation */}
+      {/* Mobile navigation — outside <header>: its backdrop blur would trap this fixed panel */}
       <div
         id="mobile-menu"
         hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-[4.5rem] overflow-y-auto bg-background text-foreground lg:hidden"
+        className="fixed inset-x-0 bottom-0 top-[4.5rem] z-40 overflow-y-auto bg-background text-foreground lg:hidden"
       >
         <div className="container-luxe flex min-h-full flex-col justify-between gap-12 py-10">
           <nav aria-label="Mobile">
@@ -130,6 +132,6 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }
