@@ -31,13 +31,17 @@ function TreatmentCard({ treatment, index }: { treatment: Treatment; index: numb
       </div>
       <div className="flex flex-1 flex-col pt-7">
         <h3 className="font-serif text-[1.85rem] leading-tight">{name}</h3>
-        <div className="mt-4 flex items-center justify-between border-y border-border py-3 text-sm">
-          <span className="flex items-center gap-2 text-muted-foreground">
-            <Clock className="size-4" strokeWidth={1.25} aria-hidden />
-            {treatment.durationMin} {t.treatments.minutes}
-          </span>
-          <span className="font-serif text-xl">{t.treatments.price(treatment.price)}*</span>
-        </div>
+        <ul className="mt-4 divide-y divide-border border-y border-border text-sm">
+          {treatment.options.map((o) => (
+            <li key={`${o.durationMin ?? "session"}-${o.price}`} className="flex items-center justify-between py-3">
+              <span className="flex items-center gap-2 text-muted-foreground">
+                <Clock className="size-4" strokeWidth={1.25} aria-hidden />
+                {o.durationMin ? `${o.durationMin} ${t.treatments.minutes}` : t.treatments.session}
+              </span>
+              <span className="font-serif text-xl">{t.treatments.price(o.price)}</span>
+            </li>
+          ))}
+        </ul>
         <p className="mt-5 flex-1 text-[0.95rem] text-muted-foreground">{treatment.description[lang]}</p>
         <WhatsAppButton
           treatment={name}
@@ -71,7 +75,7 @@ export function TreatmentsSection({ featuredOnly = false }: { featuredOnly?: boo
         <div
           className={cn(
             "grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:gap-x-10",
-            featuredOnly ? "mt-16 md:mt-20 lg:grid-cols-3" : "lg:grid-cols-3 xl:grid-cols-4",
+            featuredOnly ? "mt-16 md:mt-20 lg:grid-cols-3" : "lg:grid-cols-3",
           )}
         >
           {items.map((tr, i) => (
@@ -81,7 +85,10 @@ export function TreatmentsSection({ featuredOnly = false }: { featuredOnly?: boo
           ))}
         </div>
 
-        <p className="mt-14 max-w-2xl text-xs text-muted-foreground">* {t.treatments.placeholderNote}</p>
+        <div className="mt-16 flex flex-col items-start gap-5 border-t border-border pt-10 sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-xl text-muted-foreground">{t.treatments.moreNote}</p>
+          <WhatsAppButton variant="ink" size="md" label={t.contact.cta} />
+        </div>
       </div>
     </section>
   );
