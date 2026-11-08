@@ -11,6 +11,7 @@ import { HomeHero } from "@/components/sections/HomeHero";
 import { LegalContent } from "@/components/sections/LegalContent";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { TreatmentsSection } from "@/components/sections/TreatmentsSection";
+import { SpaceSection } from "@/components/sections/SpaceSection";
 import { PageHero } from "@/components/site/PageHero";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import type { Lang } from "@/i18n/routes";
@@ -23,6 +24,7 @@ export function HomePage({ lang }: P) {
     <SiteLayout lang={lang} page="home" overlayHeader>
       <HomeHero />
       <AboutSection />
+      <SpaceSection />
       <TreatmentsSection featuredOnly />
       <ExperienceSection />
       <GallerySection />
@@ -36,8 +38,9 @@ export function AboutPage({ lang }: P) {
   const t = translations[lang];
   return (
     <SiteLayout lang={lang} page="about">
-      <PageHero eyebrow={t.about.eyebrow} title={t.about.title} intro={t.about.lead} image="interior" />
+      <PageHero eyebrow={t.about.eyebrow} title={t.about.title} intro={t.about.lead} image="spaceRoom" />
       <AboutSection full />
+      <SpaceSection />
       <BookingBand />
     </SiteLayout>
   );
@@ -81,7 +84,7 @@ export function ContactPage({ lang }: P) {
   const t = translations[lang];
   return (
     <SiteLayout lang={lang} page="contact">
-      <PageHero eyebrow={t.contact.eyebrow} title={t.contact.title} image="candles" />
+      <PageHero eyebrow={t.contact.eyebrow} title={t.contact.title} image="spaceStorefront" />
       <ContactSection showHeading={false} />
     </SiteLayout>
   );

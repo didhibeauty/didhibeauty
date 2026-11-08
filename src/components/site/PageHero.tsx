@@ -12,8 +12,8 @@ export function PageHero({
 }: {
   eyebrow: string;
   title: string;
-  italic?: string;
-  intro?: string;
+  italic?: string | undefined;
+  intro?: string | undefined;
   image: ImageKey;
 }) {
   const { lang } = useLanguage();

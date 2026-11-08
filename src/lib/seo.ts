@@ -22,14 +22,15 @@ const absolute = (origin: string, path: string) => (origin ? `${origin}${path}` 
 
 export function localBusinessJsonLd(lang: Lang, origin: string) {
   const ig = instagramUrl(BUSINESS.instagram);
+  const a = BUSINESS.address;
   const address: Record<string, string> = {
     "@type": "PostalAddress",
-    addressLocality: BUSINESS.address.locality,
-    addressRegion: BUSINESS.address.region,
-    addressCountry: BUSINESS.address.country,
+    addressLocality: a.locality,
+    addressRegion: a.region,
+    addressCountry: a.country,
   };
-  if (BUSINESS.address.street) address.streetAddress = BUSINESS.address.street;
-  if (BUSINESS.address.postalCode) address.postalCode = BUSINESS.address.postalCode;
+  if (a.street) address["streetAddress"] = `${a.street}, ${a.area}`;
+  if (a.postalCode) address["postalCode"] = a.postalCode;
 
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -42,9 +43,10 @@ export function localBusinessJsonLd(lang: Lang, origin: string) {
     address,
     areaServed: { "@type": "City", name: "Marbella" },
     availableLanguage: ["es", "en"],
+    hasMap: BUSINESS.mapsUrl,
   };
-  if (BUSINESS.email) data.email = BUSINESS.email;
-  if (ig) data.sameAs = [ig];
+  if (BUSINESS.email) data["email"] = BUSINESS.email;
+  if (ig) data["sameAs"] = [ig];
   return data;
 }
 
@@ -57,8 +59,8 @@ export function pageHead({
 }: {
   lang: Lang;
   page: PageKey;
-  origin?: string;
-  image?: ImageKey;
+  origin?: string | undefined;
+  image?: ImageKey | undefined;
 }) {
   const t = translations[lang].seo;
   const { title, description } = t[page];
