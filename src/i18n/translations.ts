@@ -24,7 +24,7 @@ const es = {
     skip: "Saltar al contenido",
   },
   hero: {
-    eyebrow: "Masajes y bienestar · Marbella",
+    eyebrow: "Masajes y estética · Puerto Banús, Marbella",
     titleLine1: "El arte de desconectar.",
     titleLine2: "El placer de cuidarte.",
     subtitle:
@@ -32,22 +32,16 @@ const es = {
     ctaTreatments: "Descubrir tratamientos",
     ctaBook: "Reservar experiencia",
     scroll: "Desliza",
-    location: "Marbella · Costa del Sol",
+    location: "Puerto Banús · Marbella",
   },
   about: {
     eyebrow: "Sobre nosotros",
     title: "Un espacio para volver a ti.",
-    lead: "Un refugio sereno en Marbella, pensado para que el tiempo se detenga y el cuerpo vuelva a su calma natural.",
+    lead: "Un refugio sereno en Puerto Banús, pensado para que el tiempo se detenga y el cuerpo vuelva a su calma natural.",
     paragraphs: [
       "Cada sesión comienza escuchándote. Tu ritmo, tus necesidades y cómo te sientes ese día marcan el tratamiento, nunca al revés.",
       "Creemos en un bienestar sencillo y honesto: manos atentas, materiales naturales, luz suave y el silencio necesario para desconectar de verdad.",
     ],
-    therapistLabel: "Tu terapeuta",
-    therapistName: "[Nombre de la terapeuta]",
-    therapistBio:
-      "[Breve presentación de la terapeuta: quién es, qué le inspira y cómo entiende el masaje.]",
-    experienceLabel: "Formación y experiencia",
-    experienceText: "[Añadir aquí la formación y la trayectoria profesional reales.]",
     philosophyEyebrow: "Nuestra filosofía",
     philosophyTitle: "Cuidar con calma, con intención y con detalle.",
     pillars: [
@@ -79,8 +73,8 @@ const es = {
     bookAria: (name: string) => `Reservar ${name} por WhatsApp`,
     minutes: "min",
     viewAll: "Ver todos los tratamientos",
-    placeholderNote:
-      "Precios y duraciones orientativos, pendientes de confirmación. Consulta por WhatsApp para más detalles.",
+    session: "Sesión",
+    moreNote: "¿Buscas otro tratamiento? Escríbenos por WhatsApp y te informamos.",
     price: (n: number) => `${n} €`,
   },
   experience: {
@@ -92,7 +86,7 @@ const es = {
     steps: [
       {
         title: "Bienvenida",
-        text: "Te recibimos con calma, con una infusión y un espacio para llegar sin prisas.",
+        text: "Te recibimos con calma, en un espacio pensado para llegar sin prisas.",
       },
       {
         title: "Conversación",
@@ -109,6 +103,13 @@ const es = {
     ],
     quote: "El verdadero lujo es el tiempo que te dedicas a ti.",
     cta: "Descubrir la experiencia",
+  },
+  space: {
+    eyebrow: "Nuestro espacio",
+    title: "Un refugio en Puerto Banús",
+    intro:
+      "Luz cálida, materiales naturales y un ambiente tranquilo a pocos pasos del puerto. Así es el lugar donde cuidamos de ti.",
+    cta: "Cómo llegar",
   },
   gallery: {
     eyebrow: "Galería",
@@ -139,7 +140,8 @@ const es = {
     pending: "Por confirmar",
     cta: "Reservar por WhatsApp",
     mapTitle: "Mapa de ubicación en Marbella",
-    mapNote: "Ubicación aproximada · Marbella",
+    mapNote: "Avenida Julio Iglesias · Puerto Banús, Marbella",
+    openMaps: "Abrir en Google Maps",
   },
   bookingBand: {
     eyebrow: "Reservas",
@@ -149,7 +151,7 @@ const es = {
   },
   footer: {
     description:
-      "Experiencias de masaje y bienestar en Marbella. Un espacio sereno para desconectar y cuidarte.",
+      "Centro de masajes y estética en Puerto Banús, Marbella. Un espacio sereno para desconectar y cuidarte.",
     navTitle: "Navegación",
     contactTitle: "Contacto",
     followTitle: "Síguenos",
@@ -212,7 +214,7 @@ const es = {
     home: {
       title: `${BRAND.name} · Masajes en Marbella | Bienestar y relajación`,
       description:
-        "Centro de masajes en Marbella: masaje relajante, terapéutico, piedras calientes y más. Una experiencia de bienestar y relajación personalizada. Reserva por WhatsApp.",
+        "Centro de masajes en Marbella, en Puerto Banús: masaje relajante, deportivo, completo, reflexología y maderoterapia. Bienestar y relajación personalizados. Reserva por WhatsApp.",
     },
     about: {
       title: `Sobre nosotros · ${BRAND.name} Marbella`,
@@ -222,7 +224,7 @@ const es = {
     treatments: {
       title: `Tratamientos y precios · Masajes en Marbella | ${BRAND.name}`,
       description:
-        "Masaje relajante, tejido profundo, terapéutico, piedras calientes, aromaterapia, linfático, tailandés y deportivo en Marbella. Reserva tu masaje por WhatsApp.",
+        "Masaje relajante, deportivo y completo, reflexología y maderoterapia en Puerto Banús, Marbella. Precios desde 40 €. Reserva tu masaje por WhatsApp.",
     },
     experience: {
       title: `La experiencia · Bienestar en Marbella | ${BRAND.name}`,
@@ -265,7 +267,7 @@ const en: Dictionary = {
     skip: "Skip to content",
   },
   hero: {
-    eyebrow: "Massage & wellness · Marbella",
+    eyebrow: "Massage & beauty · Puerto Banús, Marbella",
     titleLine1: "The Art of Unwinding.",
     titleLine2: "The Pleasure of Self-Care.",
     subtitle:
@@ -273,22 +275,16 @@ const en: Dictionary = {
     ctaTreatments: "Discover Treatments",
     ctaBook: "Book Your Experience",
     scroll: "Scroll",
-    location: "Marbella · Costa del Sol",
+    location: "Puerto Banús · Marbella",
   },
   about: {
     eyebrow: "About",
     title: "A Space to Reconnect With Yourself.",
-    lead: "A serene retreat in Marbella, designed so time slows down and the body returns to its natural calm.",
+    lead: "A serene retreat in Puerto Banús, designed so time slows down and the body returns to its natural calm.",
     paragraphs: [
       "Every session begins by listening. Your pace, your needs and how you feel that day shape the treatment — never the other way around.",
       "We believe in simple, honest well-being: attentive hands, natural materials, soft light and the quiet you need to truly switch off.",
     ],
-    therapistLabel: "Your therapist",
-    therapistName: "[Therapist's name]",
-    therapistBio:
-      "[Short introduction of the therapist: who she is, what inspires her and how she approaches massage.]",
-    experienceLabel: "Training & experience",
-    experienceText: "[Add the real training and professional background here.]",
     philosophyEyebrow: "Our philosophy",
     philosophyTitle: "Care with calm, intention and attention to detail.",
     pillars: [
@@ -320,8 +316,8 @@ const en: Dictionary = {
     bookAria: (name: string) => `Book ${name} on WhatsApp`,
     minutes: "min",
     viewAll: "View all treatments",
-    placeholderNote:
-      "Prices and durations are indicative and pending confirmation. Message us on WhatsApp for details.",
+    session: "Session",
+    moreNote: "Looking for another treatment? Message us on WhatsApp and we'll tell you more.",
     price: (n: number) => `€${n}`,
   },
   experience: {
@@ -333,7 +329,7 @@ const en: Dictionary = {
     steps: [
       {
         title: "Welcome",
-        text: "We greet you calmly, with an herbal infusion and a space to arrive unhurried.",
+        text: "We greet you calmly, in a space designed to help you arrive unhurried.",
       },
       {
         title: "Conversation",
@@ -350,6 +346,13 @@ const en: Dictionary = {
     ],
     quote: "True luxury is the time you give to yourself.",
     cta: "Discover the experience",
+  },
+  space: {
+    eyebrow: "Our space",
+    title: "A retreat in Puerto Banús",
+    intro:
+      "Warm light, natural materials and a calm atmosphere just steps from the marina. This is where we take care of you.",
+    cta: "Get directions",
   },
   gallery: {
     eyebrow: "Gallery",
@@ -379,7 +382,8 @@ const en: Dictionary = {
     pending: "To be confirmed",
     cta: "Book on WhatsApp",
     mapTitle: "Location map in Marbella",
-    mapNote: "Approximate location · Marbella",
+    mapNote: "Avenida Julio Iglesias · Puerto Banús, Marbella",
+    openMaps: "Open in Google Maps",
   },
   bookingBand: {
     eyebrow: "Bookings",
@@ -389,7 +393,7 @@ const en: Dictionary = {
   },
   footer: {
     description:
-      "Massage and wellness experiences in Marbella. A serene space to unwind and take care of yourself.",
+      "Massage and beauty center in Puerto Banús, Marbella. A serene space to unwind and take care of yourself.",
     navTitle: "Navigation",
     contactTitle: "Contact",
     followTitle: "Follow us",
@@ -452,7 +456,7 @@ const en: Dictionary = {
     home: {
       title: `${BRAND.name} · Luxury Massage in Marbella | Wellness`,
       description:
-        "Luxury massage in Marbella: relaxing, therapeutic, hot stone massage and more. A personalized wellness experience with a dedicated massage therapist. Book on WhatsApp.",
+        "Luxury massage in Marbella, in Puerto Banús: relaxing, sports and full body massage, reflexology and wood therapy. A personalized wellness experience. Book on WhatsApp.",
     },
     about: {
       title: `About · ${BRAND.name} Marbella`,
@@ -462,7 +466,7 @@ const en: Dictionary = {
     treatments: {
       title: `Treatments & Prices · Massage in Marbella | ${BRAND.name}`,
       description:
-        "Relaxing, deep tissue, therapeutic, hot stone, aromatherapy, lymphatic, Thai and sports massage in Marbella. Book your massage on WhatsApp.",
+        "Relaxing, sports and full body massage, reflexology and wood therapy in Puerto Banús, Marbella. Prices from €40. Book your massage on WhatsApp.",
     },
     experience: {
       title: `The Experience · Wellness Marbella | ${BRAND.name}`,
