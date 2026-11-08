@@ -1,3 +1,4 @@
+import { MapPin } from "lucide-react";
 import type { ReactNode } from "react";
 
 import { Reveal } from "@/components/site/Reveal";
@@ -11,7 +12,7 @@ export function ContactSection({ showHeading = true }: { showHeading?: boolean }
   const { t, lang } = useLanguage();
   const c = t.contact;
   const ig = instagramUrl(BUSINESS.instagram);
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(BUSINESS.mapQuery)}&z=13&output=embed`;
+  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(BUSINESS.mapQuery)}&z=16&output=embed`;
   const a = BUSINESS.address;
 
   const rows: { label: string; value: ReactNode }[] = [
@@ -21,7 +22,17 @@ export function ContactSection({ showHeading = true }: { showHeading?: boolean }
         <>
           {a.street ? `${a.street}${a.postalCode ? `, ${a.postalCode}` : ""}` : c.addressPending}
           <br />
-          {a.locality}, {a.region} · {a.countryName[lang]}
+          {a.area}, {a.locality} ({a.region})
+          <br />
+          <a
+            href={BUSINESS.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline mt-2 inline-flex items-center gap-1.5 pb-0.5 text-olive-deep"
+          >
+            <MapPin className="size-3.5" strokeWidth={1.5} aria-hidden />
+            {c.openMaps}
+          </a>
         </>
       ),
     },
@@ -110,7 +121,12 @@ export function ContactSection({ showHeading = true }: { showHeading?: boolean }
               className="map-muted absolute inset-0 h-full w-full border-0"
             />
           </div>
-          <p className="mt-3 text-xs text-muted-foreground">{c.mapNote}</p>
+          <p className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
+            <span>{c.mapNote}</span>
+            <a href={BUSINESS.mapsUrl} target="_blank" rel="noopener noreferrer" className="link-underline pb-0.5 text-foreground">
+              {c.openMaps} ↗
+            </a>
+          </p>
         </Reveal>
       </div>
     </section>

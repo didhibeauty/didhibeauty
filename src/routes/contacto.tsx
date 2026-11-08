@@ -5,7 +5,7 @@ import { ContactPage } from "@/views/pages";
 
 export const Route = createFileRoute("/contacto")({
   loader: () => resolveOrigin(),
-  head: ({ loaderData }) => pageHead({ lang: "es", page: "contact", origin: loaderData, image: "candles" }),
+  head: ({ loaderData }) => pageHead({ lang: "es", page: "contact", origin: loaderData, image: "spaceStorefront" }),
   component: Page,
 });
 

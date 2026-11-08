@@ -44,20 +44,6 @@ export function AboutSection({ full = false }: { full?: boolean }) {
               ))}
             </div>
 
-            <div className="mt-10 grid gap-8 border-t border-border pt-8 sm:grid-cols-2">
-              <div>
-                <p className="eyebrow text-olive-deep">{a.therapistLabel}</p>
-                <p className="mt-3 font-serif text-2xl">{a.therapistName}</p>
-                <p className="mt-2 text-sm text-muted-foreground">{a.therapistBio}</p>
-              </div>
-              {full && (
-                <div>
-                  <p className="eyebrow text-olive-deep">{a.experienceLabel}</p>
-                  <p className="mt-3 text-sm text-muted-foreground">{a.experienceText}</p>
-                </div>
-              )}
-            </div>
-
             {!full && (
               <Button asChild variant="textLink" size="bare" className="mt-10">
                 <Link to={href("about")}>{a.cta}</Link>

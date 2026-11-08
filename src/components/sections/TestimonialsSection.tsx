@@ -8,6 +8,8 @@ import { useLanguage } from "@/i18n/LanguageContext";
 export function TestimonialsSection() {
   const { t, lang } = useLanguage();
   const tt = t.testimonials;
+  // Hidden until genuine client reviews are added in src/config/testimonials.ts
+  if (TESTIMONIALS_ARE_DEMO || TESTIMONIALS.length === 0) return null;
   return (
     <section className="section-y border-t border-border">
       <div className="container-luxe">

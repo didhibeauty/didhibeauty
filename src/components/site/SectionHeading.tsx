@@ -15,11 +15,11 @@ export function SectionHeading({
   eyebrow: string;
   title: string;
   /** Optional second line set in italic */
-  italic?: string;
-  intro?: string;
+  italic?: string | undefined;
+  intro?: string | undefined;
   align?: "left" | "center";
   as?: "h1" | "h2";
-  className?: string;
+  className?: string | undefined;
   children?: ReactNode;
 }) {
   return (

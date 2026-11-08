@@ -28,7 +28,7 @@ export function Reveal({
     setPending(true);
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry?.isIntersecting) {
           setPending(false);
           io.disconnect();
         }

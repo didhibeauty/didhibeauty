@@ -18,6 +18,12 @@ import treatmentAromatherapy from "@/assets/treatment-aromatherapy.webp";
 import treatmentLymphatic from "@/assets/treatment-lymphatic.webp";
 import treatmentThai from "@/assets/treatment-thai.webp";
 import treatmentSports from "@/assets/treatment-sports.webp";
+import treatmentReflexology from "@/assets/treatment-reflexology.webp";
+// Real photos of the Didhi Beauty space (Puerto Banús)
+import spaceTreatmentRoom from "@/assets/space-treatment-room.webp.asset.json";
+import spaceReception from "@/assets/space-reception.webp.asset.json";
+import spaceLounge from "@/assets/space-lounge.webp.asset.json";
+import spaceStorefront from "@/assets/space-storefront.webp.asset.json";
 
 import type { Lang } from "@/i18n/routes";
 
@@ -29,6 +35,51 @@ export type SiteImage = {
 };
 
 export const IMAGES = {
+  spaceRoom: {
+    src: spaceTreatmentRoom.url,
+    width: 740,
+    height: 1078,
+    alt: {
+      es: "Sala de masajes de Didhi Beauty con camilla, orquídeas y luz cálida",
+      en: "Didhi Beauty massage room with treatment bed, orchids and warm light",
+    },
+  },
+  spaceReception: {
+    src: spaceReception.url,
+    width: 689,
+    height: 539,
+    alt: {
+      es: "Recepción de Didhi Beauty con detalles naturales y aroma ambiental",
+      en: "Didhi Beauty reception with natural details and room fragrance",
+    },
+  },
+  spaceLounge: {
+    src: spaceLounge.url,
+    width: 689,
+    height: 528,
+    alt: {
+      es: "Sala de espera de Didhi Beauty con sillones y lámparas de fibra natural",
+      en: "Didhi Beauty waiting area with armchairs and natural-fibre lamps",
+    },
+  },
+  spaceStorefront: {
+    src: spaceStorefront.url,
+    width: 1448,
+    height: 1086,
+    alt: {
+      es: "Fachada de Didhi Beauty, centro de masajes y estética en Puerto Banús",
+      en: "Didhi Beauty storefront, massage and beauty center in Puerto Banús",
+    },
+  },
+  reflexology: {
+    src: treatmentReflexology,
+    width: 900,
+    height: 1125,
+    alt: {
+      es: "Varilla de madera para reflexología, piedras y aceite natural",
+      en: "Wooden reflexology stick, stones and natural oil",
+    },
+  },
   hero: {
     src: heroSpaRoom,
     width: 1920,
@@ -161,12 +212,12 @@ export type ImageKey = keyof typeof IMAGES;
 
 /** Gallery order and layout. size: "tall" | "wide" | "square" */
 export const GALLERY: { image: ImageKey; size: "tall" | "wide" | "square" }[] = [
-  { image: "interior", size: "tall" },
-  { image: "candles", size: "wide" },
+  { image: "spaceRoom", size: "tall" },
+  { image: "spaceLounge", size: "wide" },
   { image: "aromatherapy", size: "square" },
   { image: "hotStone", size: "square" },
-  { image: "terrace", size: "wide" },
+  { image: "spaceStorefront", size: "wide" },
   { image: "ritual", size: "tall" },
-  { image: "relaxing", size: "square" },
-  { image: "thai", size: "square" },
+  { image: "spaceReception", size: "square" },
+  { image: "candles", size: "square" },
 ];

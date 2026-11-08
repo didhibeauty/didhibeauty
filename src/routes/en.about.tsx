@@ -5,7 +5,7 @@ import { AboutPage } from "@/views/pages";
 
 export const Route = createFileRoute("/en/about")({
   loader: () => resolveOrigin(),
-  head: ({ loaderData }) => pageHead({ lang: "en", page: "about", origin: loaderData, image: "interior" }),
+  head: ({ loaderData }) => pageHead({ lang: "en", page: "about", origin: loaderData, image: "spaceRoom" }),
   component: Page,
 });
 

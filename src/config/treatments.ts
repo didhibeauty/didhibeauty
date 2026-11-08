@@ -2,19 +2,23 @@
  * TREATMENT CATALOG
  * -----------------
  * Edit names, descriptions, durations and prices here.
- * PRICES AND DURATIONS ARE PLACEHOLDERS — replace them with the real ones.
+ * Each treatment can have several options (e.g. 1 hour / 30 minutes).
  * The order of this list is the order shown on the site.
  */
 import type { Lang } from "@/i18n/routes";
 import type { ImageKey } from "./images";
 
+export type TreatmentOption = {
+  /** Duration in minutes. Leave out when the price is per session. */
+  durationMin?: number;
+  /** Price in euros */
+  price: number;
+};
+
 export type Treatment = {
   id: string;
   image: ImageKey;
-  /** Duration in minutes — PLACEHOLDER */
-  durationMin: number;
-  /** Price in euros — PLACEHOLDER */
-  price: number;
+  options: TreatmentOption[];
   name: Record<Lang, string>;
   description: Record<Lang, string>;
   /** Show on the home page */
@@ -25,9 +29,11 @@ export const TREATMENTS: Treatment[] = [
   {
     id: "relaxing",
     image: "relaxing",
-    durationMin: 60,
-    price: 80,
     featured: true,
+    options: [
+      { durationMin: 60, price: 70 },
+      { durationMin: 30, price: 50 },
+    ],
     name: { es: "Masaje Relajante", en: "Relaxing Massage" },
     description: {
       es: "Movimientos suaves y envolventes para liberar tensiones, calmar la mente y devolver al cuerpo su ritmo natural.",
@@ -35,82 +41,54 @@ export const TREATMENTS: Treatment[] = [
     },
   },
   {
-    id: "deep-tissue",
-    image: "deepTissue",
-    durationMin: 60,
-    price: 95,
-    featured: true,
-    name: { es: "Masaje de Tejido Profundo", en: "Deep Tissue Massage" },
-    description: {
-      es: "Presión firme y precisa sobre las capas musculares más profundas para aliviar la rigidez acumulada.",
-      en: "Firm, precise pressure on the deeper muscle layers to ease built-up stiffness.",
-    },
-  },
-  {
-    id: "therapeutic",
-    image: "therapeutic",
-    durationMin: 60,
-    price: 90,
-    name: { es: "Masaje Terapéutico", en: "Therapeutic Massage" },
-    description: {
-      es: "Una sesión adaptada a las zonas que más lo necesitan, combinando técnicas para recuperar bienestar y movilidad.",
-      en: "A session tailored to the areas that need it most, combining techniques to restore comfort and ease of movement.",
-    },
-  },
-  {
-    id: "hot-stone",
-    image: "hotStone",
-    durationMin: 75,
-    price: 110,
-    featured: true,
-    name: { es: "Masaje con Piedras Calientes", en: "Hot Stone Massage" },
-    description: {
-      es: "El calor de las piedras volcánicas se funde con el masaje para una relajación profunda y reconfortante.",
-      en: "The warmth of volcanic stones melts into the massage for a deep, comforting relaxation.",
-    },
-  },
-  {
-    id: "aromatherapy",
-    image: "aromatherapy",
-    durationMin: 60,
-    price: 90,
-    name: { es: "Masaje con Aromaterapia", en: "Aromatherapy Massage" },
-    description: {
-      es: "Aceites esenciales seleccionados según tu momento, para un masaje que relaja los sentidos.",
-      en: "Essential oils chosen for how you feel today, for a massage that soothes every sense.",
-    },
-  },
-  {
-    id: "lymphatic",
-    image: "lymphatic",
-    durationMin: 60,
-    price: 95,
-    name: { es: "Masaje Linfático", en: "Lymphatic Massage" },
-    description: {
-      es: "Maniobras lentas, ligeras y rítmicas que aportan una agradable sensación de ligereza.",
-      en: "Slow, light and rhythmic movements that leave a pleasant feeling of lightness.",
-    },
-  },
-  {
-    id: "thai",
-    image: "thai",
-    durationMin: 90,
-    price: 120,
-    name: { es: "Masaje Tailandés", en: "Thai Massage" },
-    description: {
-      es: "Estiramientos asistidos y presiones rítmicas inspirados en la tradición tailandesa.",
-      en: "Assisted stretches and rhythmic pressure inspired by the Thai tradition.",
-    },
-  },
-  {
     id: "sports",
     image: "sports",
-    durationMin: 60,
-    price: 90,
+    featured: true,
+    options: [
+      { durationMin: 60, price: 80 },
+      { durationMin: 30, price: 60 },
+    ],
     name: { es: "Masaje Deportivo", en: "Sports Massage" },
     description: {
-      es: "Pensado para personas activas: prepara el cuerpo antes del esfuerzo y favorece la recuperación después.",
-      en: "Designed for active people: prepares the body before exercise and supports recovery afterwards.",
+      es: "Presión firme y precisa pensada para personas activas: prepara el cuerpo antes del esfuerzo y ayuda a recuperarse después.",
+      en: "Firm, precise pressure designed for active people: prepares the body before exercise and helps it recover afterwards.",
+    },
+  },
+  {
+    id: "full",
+    image: "therapeutic",
+    featured: true,
+    options: [
+      { durationMin: 60, price: 100 },
+      { durationMin: 30, price: 65 },
+    ],
+    name: { es: "Masaje Completo", en: "Full Body Massage" },
+    description: {
+      es: "Un masaje de cuerpo entero, de la cabeza a los pies, para soltar tensiones y salir con una sensación de ligereza total.",
+      en: "A head-to-toe, full body massage to release tension and leave you with a complete feeling of lightness.",
+    },
+  },
+  {
+    id: "reflexology",
+    image: "reflexology",
+    options: [
+      { durationMin: 60, price: 60 },
+      { durationMin: 30, price: 40 },
+    ],
+    name: { es: "Reflexología", en: "Reflexology" },
+    description: {
+      es: "Presiones suaves y precisas en puntos concretos de los pies para una relajación profunda de todo el cuerpo.",
+      en: "Gentle, precise pressure on specific points of the feet for a deep, whole-body relaxation.",
+    },
+  },
+  {
+    id: "wood-therapy",
+    image: "deepTissue",
+    options: [{ price: 50 }],
+    name: { es: "Maderoterapia", en: "Wood Therapy" },
+    description: {
+      es: "Técnica de masaje con instrumentos de madera que trabajan el cuerpo de forma intensa y revitalizante.",
+      en: "A massage technique using wooden tools that work the body in an intense, revitalizing way.",
     },
   },
 ];
