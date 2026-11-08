@@ -4,6 +4,7 @@ import { BRAND } from "@/config/brand";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { cn } from "@/lib/utils";
 
+/** Logo symbol + brand name, linking home. */
 export function Wordmark({ className, onClick }: { className?: string; onClick?: () => void }) {
   const { href } = useLanguage();
   return (
@@ -11,13 +12,16 @@ export function Wordmark({ className, onClick }: { className?: string; onClick?:
       to={href("home")}
       onClick={onClick}
       aria-label={BRAND.name}
-      className={cn("flex flex-col items-start leading-none", className)}
+      className={cn("flex items-center gap-3 leading-none", className)}
     >
-      <span className="font-serif text-[1.65rem] uppercase tracking-[0.24em] md:text-[1.85rem]">
-        {BRAND.wordmark.primary}
-      </span>
-      <span className="mt-1 pl-[0.15em] text-[0.55rem] font-semibold uppercase tracking-[0.62em]">
-        {BRAND.wordmark.secondary}
+      <img src={BRAND.logo.mark} alt="" width={144} height={160} className="h-11 w-auto md:h-12" />
+      <span className="flex flex-col items-start">
+        <span className="font-serif text-[1.45rem] uppercase tracking-[0.2em] md:text-[1.6rem]">
+          {BRAND.wordmark.primary}
+        </span>
+        <span className="mt-1 pl-[0.1em] text-[0.55rem] font-semibold uppercase tracking-[0.55em]">
+          {BRAND.wordmark.secondary}
+        </span>
       </span>
     </Link>
   );

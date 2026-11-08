@@ -1,3 +1,4 @@
+import { MapPin } from "lucide-react";
 import type { ReactNode } from "react";
 
 import { Reveal } from "@/components/site/Reveal";
@@ -21,7 +22,17 @@ export function ContactSection({ showHeading = true }: { showHeading?: boolean }
         <>
           {a.street ? `${a.street}${a.postalCode ? `, ${a.postalCode}` : ""}` : c.addressPending}
           <br />
-          {a.locality}, {a.region} · {a.countryName[lang]}
+          {a.area}, {a.locality} ({a.region})
+          <br />
+          <a
+            href={BUSINESS.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline mt-2 inline-flex items-center gap-1.5 pb-0.5 text-olive-deep"
+          >
+            <MapPin className="size-3.5" strokeWidth={1.5} aria-hidden />
+            {c.openMaps}
+          </a>
         </>
       ),
     },

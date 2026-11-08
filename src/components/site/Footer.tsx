@@ -8,7 +8,6 @@ import { NAV_PAGES } from "@/i18n/routes";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { WhatsAppIcon } from "./WhatsAppIcon";
-import { Wordmark } from "./Wordmark";
 
 export function Footer() {
   const { t, href, lang } = useLanguage();
@@ -19,7 +18,9 @@ export function Footer() {
     <footer className="bg-ink text-cream">
       <div className="container-luxe grid gap-14 py-20 md:grid-cols-2 lg:grid-cols-12 lg:gap-10 md:py-24">
         <div className="lg:col-span-4">
-          <Wordmark />
+          <Link to={href("home")} aria-label={BRAND.name} className="inline-block">
+            <img src={BRAND.logo.fullLight} alt={BRAND.name} width={435} height={420} loading="lazy" className="h-32 w-auto" />
+          </Link>
           <p className="mt-8 max-w-sm text-sm leading-relaxed text-cream/70">{t.footer.description}</p>
         </div>
 
@@ -41,11 +42,12 @@ export function Footer() {
           <ul className="mt-6 space-y-4 text-sm text-cream/85">
             <li className="flex gap-3">
               <MapPin className="mt-0.5 size-4 shrink-0" strokeWidth={1.25} />
-              <span>
-                {BUSINESS.address.street || t.contact.addressPending}
+              <a href={BUSINESS.mapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cream">
+                {BUSINESS.address.street}
                 <br />
-                {BUSINESS.address.locality}, {BUSINESS.address.region}
-              </span>
+                {BUSINESS.address.area}, {BUSINESS.address.locality}
+                <span className="mt-1 block text-xs text-cream/55 underline underline-offset-4">{t.contact.openMaps}</span>
+              </a>
             </li>
             <li>
               <a
