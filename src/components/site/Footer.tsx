@@ -90,7 +90,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-cream/10">
-        <div className="container-luxe flex flex-col gap-4 py-8 text-xs text-cream/55 md:flex-row md:items-center md:justify-between">
+        <div className="container-luxe flex flex-col gap-4 pb-28 pt-8 text-xs text-cream/55 md:flex-row md:items-center md:justify-between md:pb-8 md:pr-28">
           <p>
             © {year} {BRAND.name} · {BRAND.city}. {t.footer.rights}
           </p>

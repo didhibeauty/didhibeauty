@@ -93,7 +93,7 @@ export function ContactSection({ showHeading = true }: { showHeading?: boolean }
   ];
 
   return (
-    <section className="section-y">
+    <section className={showHeading ? "section-y" : "pb-24 pt-4 md:pb-32 md:pt-8"}>
       <div className="container-luxe grid gap-16 lg:grid-cols-12 lg:gap-20">
         <Reveal className="lg:col-span-6">
           {showHeading && <SectionHeading eyebrow={c.eyebrow} title={c.title} intro={c.intro} />}
