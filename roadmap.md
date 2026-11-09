@@ -4,7 +4,7 @@
 - [x] Fix mobile menu (hidden behind header blur)
 - [x] Header: logo overlaps the "Inicio" menu link — fix spacing
 - [x] Final sweep for bugs/errors (404 resource, leftover "terapeuta" text, console errors)
-- [ ] Logo choice: tree-in-hands in use; waiting for user to confirm or pick lotus. Rename brand to Didhi Beauty and use it in header/footer/favicon
+- [x] Logo: tree-in-hands confirmed by user. Rename brand to Didhi Beauty and use it in header/footer/favicon
 - [x] Real address: Avenida Julio Iglesias, Casa VX, Local 5, Puerto Banús + "open in Google Maps" link + map
 - [x] Phone/WhatsApp 610 32 63 55 (+34) on every booking button
 - [x] Remove "Tu terapeuta" block
