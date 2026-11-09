@@ -53,10 +53,10 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           solid ? "h-[4.5rem]" : "h-24",
         )}
       >
-        <Wordmark onClick={close} />
+        <Wordmark onClick={close} className="shrink-0" />
 
-        <nav aria-label="Main" className="hidden lg:block">
-          <ul className="flex items-center gap-9">
+        <nav aria-label="Main" className="hidden xl:block">
+          <ul className="flex items-center gap-7 2xl:gap-9">
             {NAV_PAGES.map((p) => (
               <li key={p}>
                 <Link
@@ -85,7 +85,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
-            className="-mr-2 flex size-11 items-center justify-center lg:hidden"
+            className="-mr-2 flex size-11 items-center justify-center xl:hidden"
           >
             {open ? <X className="size-6" strokeWidth={1.25} /> : <Menu className="size-6" strokeWidth={1.25} />}
           </button>
@@ -97,7 +97,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
       <div
         id="mobile-menu"
         hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-[4.5rem] z-40 overflow-y-auto bg-background text-foreground lg:hidden"
+        className="fixed inset-x-0 bottom-0 top-[4.5rem] z-40 overflow-y-auto bg-background text-foreground xl:hidden"
       >
         <div className="container-luxe flex min-h-full flex-col justify-between gap-12 py-10">
           <nav aria-label="Mobile">

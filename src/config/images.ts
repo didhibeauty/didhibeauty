@@ -94,8 +94,8 @@ export const IMAGES = {
     width: 900,
     height: 1125,
     alt: {
-      es: "Manos de la terapeuta preparando aceite natural para un masaje",
-      en: "Therapist's hands warming natural oil before a massage",
+      es: "Manos preparando aceite natural para un masaje",
+      en: "Hands warming natural oil before a massage",
     },
   },
   terrace: {
