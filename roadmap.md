@@ -2,6 +2,8 @@
 
 - [ ] Fix build/type errors from the initial site build
 - [ ] Fix mobile menu (hidden behind header blur)
+- [ ] Header: logo overlaps the "Inicio" menu link — fix spacing
+- [ ] Final sweep for bugs/errors (404 resource, leftover "terapeuta" text, console errors)
 - [ ] Rename brand to Didhi Beauty + design logo (2 options, user picks) and use it in header/footer/favicon
 - [ ] Real address: Avenida Julio Iglesias, Casa VX, Local 5, Puerto Banús + "open in Google Maps" link + map
 - [ ] Phone/WhatsApp 610 32 63 55 (+34) on every booking button
