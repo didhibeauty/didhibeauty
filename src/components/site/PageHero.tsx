@@ -19,7 +19,7 @@ export function PageHero({
   const { lang } = useLanguage();
   const img = IMAGES[image];
   return (
-    <section className="pt-28 md:pt-36">
+    <section className="pt-44 md:pt-48 lg:pt-36">
       <div className="container-luxe grid items-end gap-12 pb-16 md:pb-24 lg:grid-cols-12 lg:gap-16">
         <div className="animate-fade-up lg:col-span-7">
           <SectionHeading as="h1" eyebrow={eyebrow} title={title} italic={italic} intro={intro} />

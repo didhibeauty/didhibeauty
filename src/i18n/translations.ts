@@ -3,7 +3,6 @@
  * ------------
  * Every piece of text on the site, in Spanish (default) and English.
  * Edit the wording here; both languages share the same structure.
- * Text in [square brackets] is a placeholder to replace with real information.
  */
 import { BRAND } from "@/config/brand";
 import type { Lang, PageKey } from "./routes";
@@ -18,8 +17,6 @@ const es = {
     privacy: "Política de privacidad",
     cookies: "Política de cookies",
     book: "Reservar",
-    openMenu: "Abrir menú",
-    closeMenu: "Cerrar menú",
     language: "Idioma",
     skip: "Saltar al contenido",
   },
@@ -132,12 +129,9 @@ const es = {
       address: "Dirección",
       whatsapp: "WhatsApp",
       phone: "Teléfono",
-      email: "Email",
-      instagram: "Instagram",
       hours: "Horario",
     },
     addressPending: "Dirección exacta por confirmar",
-    pending: "Por confirmar",
     cta: "Reservar por WhatsApp",
     mapTitle: "Mapa de ubicación en Marbella",
     mapNote: "Avenida Julio Iglesias · Puerto Banús, Marbella",
@@ -154,7 +148,6 @@ const es = {
       "Centro de masajes y estética en Puerto Banús, Marbella. Un espacio sereno para desconectar y cuidarte.",
     navTitle: "Navegación",
     contactTitle: "Contacto",
-    followTitle: "Síguenos",
     legalTitle: "Legal",
     rights: "Todos los derechos reservados.",
   },
@@ -168,18 +161,18 @@ const es = {
   legal: {
     draftNote:
       "Texto orientativo pendiente de revisión legal. Completar con los datos reales del titular antes de publicar.",
-    updated: "Última actualización: [fecha]",
+    updated: "Última actualización: noviembre de 2026",
     privacy: {
       eyebrow: "Legal",
       title: "Política de privacidad",
       sections: [
         {
           title: "Responsable del tratamiento",
-          text: `[Nombre o razón social], con NIF [número] y domicilio en [dirección], Marbella (Málaga), es responsable de los datos personales recogidos a través de este sitio web de ${BRAND.name}.`,
+          text: `${BRAND.name}, con domicilio en Avenida Julio Iglesias, Casa VX, Local 5, Puerto Banús, Marbella (Málaga), es responsable de los datos personales recogidos a través de este sitio web.`,
         },
         {
           title: "Datos que recogemos",
-          text: "Este sitio web no dispone de formularios ni registro de usuarios. Si nos contactas por WhatsApp, teléfono o email, trataremos los datos que nos facilites únicamente para gestionar tu cita y responder a tus consultas.",
+          text: "Este sitio web no dispone de formularios ni registro de usuarios. Si nos contactas por WhatsApp o por teléfono, trataremos los datos que nos facilites únicamente para gestionar tu cita y responder a tus consultas.",
         },
         {
           title: "Base legal y conservación",
@@ -187,7 +180,7 @@ const es = {
         },
         {
           title: "Tus derechos",
-          text: "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a [email de contacto]. También puedes reclamar ante la Agencia Española de Protección de Datos (www.aepd.es).",
+          text: "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad contactando con nosotros por WhatsApp o en nuestro centro. También puedes reclamar ante la Agencia Española de Protección de Datos (www.aepd.es).",
         },
       ],
     },
@@ -261,8 +254,6 @@ const en: Dictionary = {
     privacy: "Privacy Policy",
     cookies: "Cookie Policy",
     book: "Book",
-    openMenu: "Open menu",
-    closeMenu: "Close menu",
     language: "Language",
     skip: "Skip to content",
   },
@@ -374,12 +365,9 @@ const en: Dictionary = {
       address: "Address",
       whatsapp: "WhatsApp",
       phone: "Phone",
-      email: "Email",
-      instagram: "Instagram",
       hours: "Opening hours",
     },
     addressPending: "Exact address to be confirmed",
-    pending: "To be confirmed",
     cta: "Book on WhatsApp",
     mapTitle: "Location map in Marbella",
     mapNote: "Avenida Julio Iglesias · Puerto Banús, Marbella",
@@ -396,7 +384,6 @@ const en: Dictionary = {
       "Massage and beauty center in Puerto Banús, Marbella. A serene space to unwind and take care of yourself.",
     navTitle: "Navigation",
     contactTitle: "Contact",
-    followTitle: "Follow us",
     legalTitle: "Legal",
     rights: "All rights reserved.",
   },
@@ -410,18 +397,18 @@ const en: Dictionary = {
   legal: {
     draftNote:
       "Template text pending legal review. Complete with the owner's real details before publishing.",
-    updated: "Last updated: [date]",
+    updated: "Last updated: November 2026",
     privacy: {
       eyebrow: "Legal",
       title: "Privacy Policy",
       sections: [
         {
           title: "Data controller",
-          text: `[Name or company name], tax ID [number], registered at [address], Marbella (Málaga), is responsible for the personal data collected through the ${BRAND.name} website.`,
+          text: `${BRAND.name}, located at Avenida Julio Iglesias, Casa VX, Local 5, Puerto Banús, Marbella (Málaga), is responsible for the personal data collected through this website.`,
         },
         {
           title: "Data we collect",
-          text: "This website has no forms or user accounts. If you contact us by WhatsApp, phone or email, we will use the details you provide only to manage your appointment and answer your questions.",
+          text: "This website has no forms or user accounts. If you contact us by WhatsApp or phone, we will use the details you provide only to manage your appointment and answer your questions.",
         },
         {
           title: "Legal basis and retention",
@@ -429,7 +416,7 @@ const en: Dictionary = {
         },
         {
           title: "Your rights",
-          text: "You may exercise your rights of access, rectification, erasure, objection, restriction and portability by writing to [contact email]. You may also file a complaint with the Spanish Data Protection Agency (www.aepd.es).",
+          text: "You may exercise your rights of access, rectification, erasure, objection, restriction and portability by contacting us on WhatsApp or at our center. You may also file a complaint with the Spanish Data Protection Agency (www.aepd.es).",
         },
       ],
     },

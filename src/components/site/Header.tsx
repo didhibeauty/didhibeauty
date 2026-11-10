@@ -32,7 +32,6 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         <Link
           to={href(p)}
           activeOptions={{ exact: true }}
-          activeProps={{ "aria-current": "page", className: "after:scale-x-100" }}
           className={cn("link-underline block whitespace-nowrap pb-1 font-medium uppercase", className)}
         >
           {t.nav[p]}
