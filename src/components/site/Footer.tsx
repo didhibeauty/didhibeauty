@@ -23,7 +23,7 @@ export function Footer() {
           <p className="mt-8 max-w-sm text-sm leading-relaxed text-cream/70">{t.footer.description}</p>
         </div>
 
-        <div className="lg:col-span-2 lg:col-start-6">
+        <div className="lg:col-span-2 lg:col-start-5">
           <h2 className="eyebrow text-cream/50">{t.footer.navTitle}</h2>
           <ul className="mt-6 space-y-3 text-sm">
             {NAV_PAGES.map((p) => (
@@ -36,7 +36,7 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className="lg:col-span-3">
+        <div className="lg:col-span-4">
           <h2 className="eyebrow text-cream/50">{t.footer.contactTitle}</h2>
           <ul className="mt-6 space-y-4 text-sm text-cream/85">
             <li className="flex gap-3">
@@ -57,13 +57,15 @@ export function Footer() {
                 className="flex gap-3 hover:text-cream"
               >
                 <WhatsAppIcon className="mt-0.5 size-4 shrink-0" />
-                WhatsApp · {BUSINESS.phone.display}
+                <span>
+                  WhatsApp · <span className="whitespace-nowrap">{BUSINESS.phone.display}</span>
+                </span>
               </a>
             </li>
             <li>
               <a href={`tel:${BUSINESS.phone.href}`} className="flex gap-3 hover:text-cream">
                 <Phone className="mt-0.5 size-4 shrink-0" strokeWidth={1.25} />
-                {BUSINESS.phone.display}
+                <span className="whitespace-nowrap">{BUSINESS.phone.display}</span>
               </a>
             </li>
           </ul>
