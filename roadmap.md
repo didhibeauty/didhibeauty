@@ -11,3 +11,6 @@
 - [ ] Reviews: waiting for genuine client reviews from the user (section hidden until then)
 - [x] Present the user's space with their photos (waiting on photos)
 - [x] Treatments & prices: Relajante 70€/1h · 50€/30min; Deportivo (replaces deep tissue) 80€/1h · 60€/30min; Completo 100€/1h · 65€/30min; Reflexología 60€/1h · 40€/30min; Maderoterapia 50€
+- [x] Remove Instagram / email / "Síguenos" (owner has none yet)
+- [x] Top menu links always visible, no hamburger; no overlap with the logo at any screen size
+- [x] Text/bug sweep: legal placeholders and draft banner removed, footer phone no longer wraps
