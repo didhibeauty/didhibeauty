@@ -14,3 +14,4 @@
 - [x] Remove Instagram / email / "Síguenos" (owner has none yet)
 - [x] Top menu links always visible, no hamburger; no overlap with the logo at any screen size
 - [x] Text/bug sweep: legal placeholders and draft banner removed, footer phone no longer wraps
+- [x] Vercel (didhibeauty.com): space photos and favicon 404 — ship them as regular project files
