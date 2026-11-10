@@ -33,4 +33,4 @@ use the editor.
 - All site text lives in `src/i18n/translations.ts` (es default at `/`, en under `/en`); route files only pick language + SEO via `pageHead()` — keeps both languages in sync.
 - Business data (brand, logo, contact, address, hours, treatments, images) lives in `src/config/*`; components never hardcode it — so the owner's details change in one place.
 - All booking links go through `buildWhatsAppUrl()` in `src/lib/whatsapp.ts` — one number, consistent pre-filled message.
-- Mobile menu is rendered outside `<header>` because the header's backdrop blur traps fixed children.
+- Header has no hamburger menu: page links are always visible (one row on desktop, a second row on small screens) — the owner wants every page one tap away; page tops pad for the taller small-screen header.

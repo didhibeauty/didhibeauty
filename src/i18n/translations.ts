@@ -5,6 +5,7 @@
  * Edit the wording here; both languages share the same structure.
  */
 import { BRAND } from "@/config/brand";
+import { BUSINESS } from "@/config/business";
 import type { Lang, PageKey } from "./routes";
 
 const es = {
@@ -159,8 +160,6 @@ const es = {
     floating: "Reservar por WhatsApp",
   },
   legal: {
-    draftNote:
-      "Texto orientativo pendiente de revisión legal. Completar con los datos reales del titular antes de publicar.",
     updated: "Última actualización: noviembre de 2026",
     privacy: {
       eyebrow: "Legal",
@@ -168,7 +167,7 @@ const es = {
       sections: [
         {
           title: "Responsable del tratamiento",
-          text: `${BRAND.name}, con domicilio en Avenida Julio Iglesias, Casa VX, Local 5, Puerto Banús, Marbella (Málaga), es responsable de los datos personales recogidos a través de este sitio web.`,
+          text: `${BRAND.name}, con domicilio en ${BUSINESS.address.street}, ${BUSINESS.address.area}, ${BUSINESS.address.locality} (${BUSINESS.address.region}), es responsable de los datos personales recogidos a través de este sitio web.`,
         },
         {
           title: "Datos que recogemos",
@@ -395,8 +394,6 @@ const en: Dictionary = {
     floating: "Book on WhatsApp",
   },
   legal: {
-    draftNote:
-      "Template text pending legal review. Complete with the owner's real details before publishing.",
     updated: "Last updated: November 2026",
     privacy: {
       eyebrow: "Legal",
@@ -404,7 +401,7 @@ const en: Dictionary = {
       sections: [
         {
           title: "Data controller",
-          text: `${BRAND.name}, located at Avenida Julio Iglesias, Casa VX, Local 5, Puerto Banús, Marbella (Málaga), is responsible for the personal data collected through this website.`,
+          text: `${BRAND.name}, located at ${BUSINESS.address.street}, ${BUSINESS.address.area}, ${BUSINESS.address.locality} (${BUSINESS.address.region}), is responsible for the personal data collected through this website.`,
         },
         {
           title: "Data we collect",
