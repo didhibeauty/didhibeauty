@@ -20,10 +20,10 @@ import treatmentThai from "@/assets/treatment-thai.webp";
 import treatmentSports from "@/assets/treatment-sports.webp";
 import treatmentReflexology from "@/assets/treatment-reflexology.webp";
 // Real photos of the Didhi Beauty space (Puerto Banús)
-import spaceTreatmentRoom from "@/assets/space-treatment-room.webp.asset.json";
-import spaceReception from "@/assets/space-reception.webp.asset.json";
-import spaceLounge from "@/assets/space-lounge.webp.asset.json";
-import spaceStorefront from "@/assets/space-storefront.webp.asset.json";
+import spaceTreatmentRoom from "@/assets/space-treatment-room.webp";
+import spaceReception from "@/assets/space-reception.webp";
+import spaceLounge from "@/assets/space-lounge.webp";
+import spaceStorefront from "@/assets/space-storefront.webp";
 
 import type { Lang } from "@/i18n/routes";
 
@@ -36,7 +36,7 @@ export type SiteImage = {
 
 export const IMAGES = {
   spaceRoom: {
-    src: spaceTreatmentRoom.url,
+    src: spaceTreatmentRoom,
     width: 740,
     height: 1078,
     alt: {
@@ -45,7 +45,7 @@ export const IMAGES = {
     },
   },
   spaceReception: {
-    src: spaceReception.url,
+    src: spaceReception,
     width: 689,
     height: 539,
     alt: {
@@ -54,7 +54,7 @@ export const IMAGES = {
     },
   },
   spaceLounge: {
-    src: spaceLounge.url,
+    src: spaceLounge,
     width: 689,
     height: 528,
     alt: {
@@ -63,7 +63,7 @@ export const IMAGES = {
     },
   },
   spaceStorefront: {
-    src: spaceStorefront.url,
+    src: spaceStorefront,
     width: 1448,
     height: 1086,
     alt: {
