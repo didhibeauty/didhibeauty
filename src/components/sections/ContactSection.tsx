@@ -4,14 +4,13 @@ import type { ReactNode } from "react";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
-import { BUSINESS, instagramUrl } from "@/config/business";
+import { BUSINESS } from "@/config/business";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export function ContactSection({ showHeading = true }: { showHeading?: boolean }) {
   const { t, lang } = useLanguage();
   const c = t.contact;
-  const ig = instagramUrl(BUSINESS.instagram);
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(BUSINESS.mapQuery)}&z=16&output=embed`;
   const a = BUSINESS.address;
 
@@ -56,26 +55,6 @@ export function ContactSection({ showHeading = true }: { showHeading?: boolean }
         <a href={`tel:${BUSINESS.phone.href}`} className="link-underline pb-0.5">
           {BUSINESS.phone.display}
         </a>
-      ),
-    },
-    {
-      label: c.labels.email,
-      value: BUSINESS.email ? (
-        <a href={`mailto:${BUSINESS.email}`} className="link-underline pb-0.5">
-          {BUSINESS.email}
-        </a>
-      ) : (
-        <span className="text-muted-foreground">{c.pending}</span>
-      ),
-    },
-    {
-      label: c.labels.instagram,
-      value: ig ? (
-        <a href={ig} target="_blank" rel="noopener noreferrer" className="link-underline pb-0.5">
-          @{BUSINESS.instagram}
-        </a>
-      ) : (
-        <span className="text-muted-foreground">{c.pending}</span>
       ),
     },
     {

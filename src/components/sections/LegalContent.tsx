@@ -5,12 +5,9 @@ export function LegalContent({ kind }: { kind: "privacy" | "cookies" }) {
   const { t } = useLanguage();
   const doc = t.legal[kind];
   return (
-    <section className="pb-24 pt-32 md:pb-32 md:pt-44">
+    <section className="pb-24 pt-48 md:pb-32 md:pt-52 lg:pt-44">
       <div className="container-luxe max-w-3xl">
         <SectionHeading as="h1" eyebrow={doc.eyebrow} title={doc.title} />
-        <p className="mt-8 border-l-2 border-olive bg-secondary px-5 py-4 text-sm text-muted-foreground">
-          {t.legal.draftNote}
-        </p>
         <div className="mt-14 space-y-12">
           {doc.sections.map((s) => (
             <div key={s.title}>
