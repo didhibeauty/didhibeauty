@@ -15,3 +15,4 @@
 - [x] Top menu links always visible, no hamburger; no overlap with the logo at any screen size
 - [x] Text/bug sweep: legal placeholders and draft banner removed, footer phone no longer wraps
 - [x] Vercel (didhibeauty.com): space photos and favicon 404 — ship them as regular project files
+- [x] Technical SEO: public/sitemap.xml (all 14 pages, www.didhibeauty.com), robots.txt Sitemap line, vercel.json XML header
