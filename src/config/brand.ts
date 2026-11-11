@@ -27,7 +27,7 @@ export const BRAND: {
    * Public website address, e.g. "https://www.yourdomain.com" (no trailing slash).
    * Leave empty to detect it automatically from the visitor's request.
    */
-  siteUrl: "",
+  siteUrl: "https://www.didhibeauty.com",
   /** Logo files: full (dark text), full on dark backgrounds, and the symbol only */
   logo: { full: logoFull, fullLight: logoFullLight, mark: logoMark },
 };
