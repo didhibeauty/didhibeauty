@@ -24,6 +24,14 @@ import spaceTreatmentRoom from "@/assets/space-treatment-room.webp";
 import spaceReception from "@/assets/space-reception.webp";
 import spaceLounge from "@/assets/space-lounge.webp";
 import spaceStorefront from "@/assets/space-storefront.webp";
+// Smaller copy of the home photo for phones (faster first load)
+import heroSpaRoom960 from "@/assets/hero-spa-room-960.webp";
+// Share previews (WhatsApp, Facebook, X…), cropped to 1200×630
+import ogHome from "@/assets/og/og-home.jpg";
+import ogSpaceRoom from "@/assets/og/og-space-room.jpg";
+import ogHotStone from "@/assets/og/og-hot-stone.jpg";
+import ogAromatherapy from "@/assets/og/og-aromatherapy.jpg";
+import ogStorefront from "@/assets/og/og-storefront.jpg";
 
 import type { Lang } from "@/i18n/routes";
 
@@ -85,8 +93,8 @@ export const IMAGES = {
     width: 1920,
     height: 1088,
     alt: {
-      es: "Sala de masajes luminosa con vistas al Mediterráneo en Marbella",
-      en: "Bright massage room overlooking the Mediterranean in Marbella",
+      es: "Camilla de masaje con velas, olivo y cortinas de lino en una sala de luz cálida",
+      en: "Massage bed with candles, olive branches and linen curtains in a warmly lit room",
     },
   },
   about: {
@@ -103,8 +111,8 @@ export const IMAGES = {
     width: 1920,
     height: 1280,
     alt: {
-      es: "Terraza mediterránea de relajación con vistas al mar en Marbella",
-      en: "Mediterranean relaxation terrace with sea views in Marbella",
+      es: "Tumbonas de relajación con té de hierbas a la sombra de un olivo",
+      en: "Relaxation loungers with herbal tea in the shade of an olive tree",
     },
   },
   ritual: {
@@ -209,6 +217,18 @@ export const IMAGES = {
 } satisfies Record<string, SiteImage>;
 
 export type ImageKey = keyof typeof IMAGES;
+
+/** Responsive sources for the home photo (browser picks the lightest that fits). */
+export const HERO_SRCSET = `${heroSpaRoom960} 960w, ${heroSpaRoom} 1920w`;
+
+/** 1200×630 share-preview copies of the photo each page shows at the top. */
+export const OG_IMAGES: Partial<Record<ImageKey, string>> = {
+  hero: ogHome,
+  spaceRoom: ogSpaceRoom,
+  hotStone: ogHotStone,
+  aromatherapy: ogAromatherapy,
+  spaceStorefront: ogStorefront,
+};
 
 /** Gallery order and layout. size: "tall" | "wide" | "square" */
 export const GALLERY: { image: ImageKey; size: "tall" | "wide" | "square" }[] = [

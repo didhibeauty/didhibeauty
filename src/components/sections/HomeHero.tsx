@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
-import { IMAGES } from "@/config/images";
+import { HERO_SRCSET, IMAGES } from "@/config/images";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export function HomeHero() {
@@ -12,6 +12,8 @@ export function HomeHero() {
     <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink">
       <img
         src={img.src}
+        srcSet={HERO_SRCSET}
+        sizes="100vw"
         alt={img.alt[lang]}
         width={img.width}
         height={img.height}
@@ -21,15 +23,17 @@ export function HomeHero() {
       <div aria-hidden className="absolute inset-0 bg-hero-overlay" />
 
       <div className="container-luxe relative pb-20 pt-40 text-on-image md:pb-28">
-        <p className="eyebrow flex animate-fade-up items-center gap-4">
+        {/* SEO: the small label above is the page's main heading (keyword-rich);
+            the large slogan is a styled paragraph, so the look stays identical. */}
+        <h1 className="eyebrow flex animate-fade-up items-center gap-4">
           <span aria-hidden className="h-px w-10 bg-on-image/70" />
           {t.hero.eyebrow}
-        </p>
-        <h1 className="display-xl mt-7 max-w-5xl animate-fade-up [animation-delay:150ms]">
+        </h1>
+        <p className="display-xl mt-7 max-w-5xl animate-fade-up [animation-delay:150ms]">
           {t.hero.titleLine1}
           <br />
           <em className="font-light italic">{t.hero.titleLine2}</em>
-        </h1>
+        </p>
         <p className="mt-8 max-w-xl animate-fade-up text-base leading-relaxed text-on-image-muted [animation-delay:300ms] md:text-lg">
           {t.hero.subtitle}
         </p>
