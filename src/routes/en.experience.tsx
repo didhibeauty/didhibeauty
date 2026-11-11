@@ -5,7 +5,7 @@ import { ExperiencePage } from "@/views/pages";
 
 export const Route = createFileRoute("/en/experience")({
   loader: () => resolveOrigin(),
-  head: ({ loaderData }) => pageHead({ lang: "en", page: "experience", origin: loaderData, image: "terrace" }),
+  head: ({ loaderData }) => pageHead({ lang: "en", page: "experience", origin: loaderData, image: "aromatherapy" }),
   component: Page,
 });
 
