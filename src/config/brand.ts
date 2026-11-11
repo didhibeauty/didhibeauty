@@ -5,7 +5,7 @@
  * (header, footer, SEO titles, structured data, WhatsApp texts…).
  */
 import logoFull from "@/assets/logo-tree-full.png";
-import logoFullLight from "@/assets/logo-tree-full-light.png";
+import logoFullLight from "@/assets/logo-tree-full-light.webp";
 import logoMark from "@/assets/logo-tree-mark.png";
 
 export const BRAND: {
@@ -14,6 +14,7 @@ export const BRAND: {
   tagline: { es: string; en: string };
   city: string;
   siteUrl: string;
+  googleSiteVerification: string;
   logo: { full: string; fullLight: string; mark: string };
 } = {
   /** Full brand name used in titles, SEO and structured data */
@@ -28,6 +29,11 @@ export const BRAND: {
    * Leave empty to detect it automatically from the visitor's request.
    */
   siteUrl: "https://www.didhibeauty.com",
+  /**
+   * Google Search Console "HTML tag" code (only the content="..." value).
+   * Leave empty if the site is verified another way (e.g. DNS on Vercel).
+   */
+  googleSiteVerification: "",
   /** Logo files: full (dark text), full on dark backgrounds, and the symbol only */
   logo: { full: logoFull, fullLight: logoFullLight, mark: logoMark },
 };

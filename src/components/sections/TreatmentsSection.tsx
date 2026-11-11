@@ -10,7 +10,16 @@ import { TREATMENTS, type Treatment } from "@/config/treatments";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { cn } from "@/lib/utils";
 
-function TreatmentCard({ treatment, index }: { treatment: Treatment; index: number }) {
+function TreatmentCard({
+  treatment,
+  index,
+  headingLevel,
+}: {
+  treatment: Treatment;
+  index: number;
+  headingLevel: "h2" | "h3";
+}) {
+  const Heading = headingLevel;
   const { t, lang } = useLanguage();
   const img = IMAGES[treatment.image];
   const name = treatment.name[lang];
@@ -30,7 +39,7 @@ function TreatmentCard({ treatment, index }: { treatment: Treatment; index: numb
         </span>
       </div>
       <div className="flex flex-1 flex-col pt-7">
-        <h3 className="font-serif text-[1.85rem] leading-tight">{name}</h3>
+        <Heading className="font-serif text-[1.85rem] leading-tight">{name}</Heading>
         <ul className="mt-4 divide-y divide-border border-y border-border text-sm">
           {treatment.options.map((o) => (
             <li key={`${o.durationMin ?? "session"}-${o.price}`} className="flex items-center justify-between py-3">
@@ -80,7 +89,12 @@ export function TreatmentsSection({ featuredOnly = false }: { featuredOnly?: boo
         >
           {items.map((tr, i) => (
             <Reveal key={tr.id} delay={(i % 4) * 90}>
-              <TreatmentCard treatment={tr} index={TREATMENTS.indexOf(tr)} />
+              <TreatmentCard
+                treatment={tr}
+                index={TREATMENTS.indexOf(tr)}
+                // Under the page's H1 on the treatments page; under the section H2 on home.
+                headingLevel={featuredOnly ? "h3" : "h2"}
+              />
             </Reveal>
           ))}
         </div>

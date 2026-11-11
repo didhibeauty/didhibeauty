@@ -24,7 +24,7 @@ export function Footer() {
         </div>
 
         <div className="lg:col-span-2 lg:col-start-5">
-          <h2 className="eyebrow text-cream/50">{t.footer.navTitle}</h2>
+          <p className="eyebrow text-cream/50">{t.footer.navTitle}</p>
           <ul className="mt-6 space-y-3 text-sm">
             {NAV_PAGES.map((p) => (
               <li key={p}>
@@ -37,7 +37,7 @@ export function Footer() {
         </div>
 
         <div className="lg:col-span-4">
-          <h2 className="eyebrow text-cream/50">{t.footer.contactTitle}</h2>
+          <p className="eyebrow text-cream/50">{t.footer.contactTitle}</p>
           <ul className="mt-6 space-y-4 text-sm text-cream/85">
             <li className="flex gap-3">
               <MapPin className="mt-0.5 size-4 shrink-0" strokeWidth={1.25} />
@@ -72,7 +72,7 @@ export function Footer() {
         </div>
 
         <div className="lg:col-span-2">
-          <h2 className="eyebrow text-cream/50">{t.nav.language}</h2>
+          <p className="eyebrow text-cream/50">{t.nav.language}</p>
           <LanguageSwitcher className="mt-4" />
         </div>
       </div>

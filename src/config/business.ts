@@ -25,6 +25,18 @@ export const BUSINESS = {
   /** Instagram handle without "@". Empty = not shown yet. */
   instagram: "",
 
+  /**
+   * Link to the official Google Business Profile (Google Maps listing), e.g.
+   * "https://maps.app.goo.gl/…" or "https://g.page/…". Empty = not linked yet.
+   */
+  googleBusinessUrl: "",
+
+  /**
+   * Exact map coordinates of the shop, e.g. { latitude: 36.48, longitude: -4.95 }.
+   * Leave null until confirmed (copy them from the Google Business Profile).
+   */
+  geo: null as { latitude: number; longitude: number } | null,
+
   address: {
     street: "Avenida Julio Iglesias, Casa VX, Local 5",
     area: "Puerto Banús",
