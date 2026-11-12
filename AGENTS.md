@@ -35,4 +35,5 @@ use the editor.
 - All booking links go through `buildWhatsAppUrl()` in `src/lib/whatsapp.ts` — one number, consistent pre-filled message.
 - Header has no hamburger menu: page links are always visible (one row on desktop, a second row on small screens) — the owner wants every page one tap away; page tops pad for the taller small-screen header.
 - `public/sitemap.xml` is a static file listing every `ROUTES` path on the production domain (also `BRAND.siteUrl`); `src/test/sitemap.test.ts` fails if a page is added without updating it — Vercel serves it straight from `public/` as real XML.
+- Page SEO lives in `src/lib/seo.ts` `pageHead()`: robots meta, canonical/hreflang on `BRAND.siteUrl`, share images from 1200×630 copies in `src/assets/og` (`OG_IMAGES`), and business JSON-LD built only from `src/config/*` (empty fields omitted, never ratings) — keeps search data truthful and in one place.
 - Site images are real files in `src/assets/` imported through Vite (favicon in `public/`), never `.asset.json` CDN pointers — the site is also deployed on Vercel, where Lovable's `/__l5e/` asset paths 404.

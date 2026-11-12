@@ -204,9 +204,9 @@ const es = {
   },
   seo: {
     home: {
-      title: `Masajes en Puerto Banús y Marbella | ${BRAND.name}`,
+      title: `${BRAND.name} | Masajes en Puerto Banús, Marbella`,
       description:
-        "Masajes en Puerto Banús, Marbella: relajante, deportivo, completo, reflexología y maderoterapia. Consulta disponibilidad y reserva tu masaje por WhatsApp.",
+        "Centro de masajes en Puerto Banús, Marbella: masajes relajantes, deportivos y de cuerpo completo, reflexología y maderoterapia. Reserva tu cita por WhatsApp.",
     },
     about: {
       title: `Sobre nosotros · Centro de masajes en Puerto Banús | ${BRAND.name}`,
@@ -435,7 +435,7 @@ const en: Dictionary = {
   },
   seo: {
     home: {
-      title: `Massage in Puerto Banús & Marbella | ${BRAND.name}`,
+      title: `${BRAND.name} | Massage in Puerto Banús, Marbella`,
       description:
         "Massage in Puerto Banús, Marbella: relaxing, sports and full body massage, reflexology and wood therapy. Check availability and book on WhatsApp.",
     },

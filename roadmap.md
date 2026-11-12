@@ -16,3 +16,5 @@
 - [x] Text/bug sweep: legal placeholders and draft banner removed, footer phone no longer wraps
 - [x] Vercel (didhibeauty.com): space photos and favicon 404 — ship them as regular project files
 - [x] Technical SEO: public/sitemap.xml (all 14 pages, www.didhibeauty.com), robots.txt Sitemap line, vercel.json XML header
+- [x] Full SEO project (uploaded brief): titles/descriptions, H1/H2/H3, alt texts, robots meta, OG 1200x630, LocalBusiness JSON-LD (real data only), perf tweaks, Search Console/Business Profile hooks
+- [x] Home SEO (12 Nov): title "Didhi Beauty | Masajes en Puerto Banús, Marbella", 150–160 char ES description, single H1 with "Masajes en Puerto Banús, Marbella", canonical https://www.didhibeauty.com/

@@ -10,7 +10,11 @@ const metaOf = (h: ReturnType<typeof pageHead>, key: string) =>
 describe("SEO", () => {
   it("home page uses the requested Spanish title", () => {
     const h = pageHead({ lang: "es", page: "home", origin: ORIGIN, image: "hero" });
-    expect(h.meta[0]).toEqual({ title: "Masajes en Puerto Banús y Marbella | Didhi Beauty" });
+    expect(h.meta[0]).toEqual({ title: "Didhi Beauty | Masajes en Puerto Banús, Marbella" });
+    const desc = String(metaOf(h, "description"));
+    expect(desc.length).toBeGreaterThanOrEqual(150);
+    expect(desc.length).toBeLessThanOrEqual(160);
+    expect(h.links.find((l) => l.rel === "canonical")?.href).toBe(`${ORIGIN}/`);
   });
 
   it("pages are indexable and canonical to the production domain", () => {
