@@ -41,4 +41,17 @@ describe("Didhi Beauty business rules", () => {
   it("no longer offers the deep tissue massage", () => {
     expect(TREATMENTS.some((t) => t.id === "deep-tissue")).toBe(false);
   });
+
+  it("shows the confirmed opening hours in both languages", () => {
+    expect(BUSINESS.hours.es).toEqual([
+      "Lunes a viernes: 11:00 – 19:00",
+      "Sábado: 09:00 – 17:00",
+      "Domingo: cerrado",
+    ]);
+    expect(BUSINESS.hours.en).toEqual([
+      "Monday to Friday: 11:00 – 19:00",
+      "Saturday: 09:00 – 17:00",
+      "Sunday: closed",
+    ]);
+  });
 });

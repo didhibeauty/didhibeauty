@@ -52,10 +52,10 @@ export const BUSINESS = {
   /** "Open in Google Maps" link */
   mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAPS_QUERY)}`,
 
-  /** Opening hours text per language (from the shop window). */
+  /** Opening hours text per language. */
   hours: {
-    es: ["Invierno: lunes a sábado, 12:00 – 20:00", "Verano: lunes a sábado, 10:00 – 22:00"],
-    en: ["Winter: Monday to Saturday, 12:00 – 20:00", "Summer: Monday to Saturday, 10:00 – 22:00"],
+    es: ["Lunes a viernes: 11:00 – 19:00", "Sábado: 09:00 – 17:00", "Domingo: cerrado"],
+    en: ["Monday to Friday: 11:00 – 19:00", "Saturday: 09:00 – 17:00", "Sunday: closed"],
   },
 } as const;
 
