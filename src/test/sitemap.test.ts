@@ -27,4 +27,9 @@ describe("sitemap.xml and robots.txt", () => {
     expect(robots).not.toMatch(/^Disallow:\s*\/\s*$/m);
     expect(robots).toContain(`Sitemap: ${SITE}/sitemap.xml`);
   });
+
+  it("Vercel sends URLs with a trailing slash to the official URL with a permanent redirect", () => {
+    const vercel = JSON.parse(readFileSync(resolve(__dirname, "../../vercel.json"), "utf8"));
+    expect(vercel.trailingSlash).toBe(false);
+  });
 });

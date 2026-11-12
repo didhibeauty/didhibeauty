@@ -37,3 +37,4 @@ use the editor.
 - `public/sitemap.xml` is a static file listing every `ROUTES` path on the production domain (also `BRAND.siteUrl`); `src/test/sitemap.test.ts` fails if a page is added without updating it — Vercel serves it straight from `public/` as real XML.
 - Page SEO lives in `src/lib/seo.ts` `pageHead()`: robots meta, canonical/hreflang on `BRAND.siteUrl`, share images from 1200×630 copies in `src/assets/og` (`OG_IMAGES`), and business JSON-LD built only from `src/config/*` (empty fields omitted, never ratings) — keeps search data truthful and in one place.
 - Site images are real files in `src/assets/` imported through Vite (favicon in `public/`), never `.asset.json` CDN pointers — the site is also deployed on Vercel, where Lovable's `/__l5e/` asset paths 404.
+- `vercel.json` sets `trailingSlash: false` so slash variants (`/contacto/`) get a permanent redirect at Vercel's edge instead of the app's temporary 307 — one URL per page for Google.
