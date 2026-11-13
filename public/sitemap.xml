@@ -1,88 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.didhibeauty.com/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/sobre-nosotros</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/sobre-nosotros"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/sobre-nosotros"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/tratamientos</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/tratamientos"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/treatments"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/tratamientos"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/experiencia</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/experiencia"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/experience"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/experiencia"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/contacto</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/contacto"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/contacto"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/privacidad</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/privacidad"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/privacy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/privacidad"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/cookies</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/cookies"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/cookies"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/cookies"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/en</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/en/about</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/sobre-nosotros"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/sobre-nosotros"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/en/treatments</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/tratamientos"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/treatments"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/tratamientos"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/en/experience</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/experiencia"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/experience"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/experiencia"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/en/contact</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/contacto"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/contacto"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/en/privacy</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/privacidad"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/privacy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/privacidad"/>
   </url>
   <url>
     <loc>https://www.didhibeauty.com/en/cookies</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.didhibeauty.com/cookies"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.didhibeauty.com/en/cookies"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.didhibeauty.com/cookies"/>
   </url>
 </urlset>

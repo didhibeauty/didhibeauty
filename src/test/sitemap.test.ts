@@ -18,6 +18,13 @@ describe("sitemap.xml and robots.txt", () => {
     expect(new Set(locs).size).toBe(locs.length);
   });
 
+  it("is a plain sitemap (urlset/url/loc only) so browsers show the XML tree instead of run-on text", () => {
+    expect(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>')).toBe(true);
+    expect(xml).toContain('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">');
+    expect(xml).not.toContain("xhtml");
+    expect((xml.match(/<url>/g) ?? []).length).toBe(14);
+  });
+
   it("uses the same production domain as the page canonicals", () => {
     expect(BRAND.siteUrl).toBe(SITE);
   });
