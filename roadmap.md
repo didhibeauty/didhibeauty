@@ -19,4 +19,5 @@
 - [x] Full SEO project (uploaded brief): titles/descriptions, H1/H2/H3, alt texts, robots meta, OG 1200x630, LocalBusiness JSON-LD (real data only), perf tweaks, Search Console/Business Profile hooks
 - [x] Home SEO (12 Nov): title "Didhi Beauty | Masajes en Puerto Banús, Marbella", 150–160 char ES description, single H1 with "Masajes en Puerto Banús, Marbella", canonical https://www.didhibeauty.com/
 - [x] Domain/indexing audit (12 Nov): live checks of 4 domain versions, canonicals, sitemap, robots; vercel.json trailingSlash:false (slash variants were 307)
+- [x] Opening hours (12 Nov): Mon–Fri 11:00–19:00, Sat 09:00–17:00, Sun closed (replaces the winter/summer split)
 - [ ] Owner, in Vercel dashboard: set apex → www redirect to 301 (HTTP→HTTPS 308 is fixed by Vercel); optionally redirect didhibeauty.vercel.app → www
